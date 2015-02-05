@@ -1,0 +1,11 @@
+services:
+    vipaka.navbar.listener:
+        class: vipaka\navbar\event\main_listener
+        arguments:
+            - @controller.helper
+            - @template
+            - @dbal.conn
+            - @config
+            - @config_text
+        tags:
+            - { name: event.listener }

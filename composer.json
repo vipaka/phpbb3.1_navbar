@@ -1,0 +1,33 @@
+{
+	"name": "vipaka/navbar",
+	"type": "phpbb-extension",
+	"description": "Navigation Buttons Extension for phpBB 3.1",
+	"homepage": "https://www.esmaerin.com/phpbb/navigation.zip",
+	"version": "1.0.7",
+	"time": "2014-10-30",
+	"license": "GPL-2.0",
+	"authors": [{
+			"name": "Amelia Winstead",
+			"email": "ladyvipaka@yahoo.com",
+			"homepage": "www.esmaerin.com",
+			"role": "Lead Developer"
+		},
+		{
+			"name": "Kamahl19",
+			"email": "unknown",
+			"homepage": "http://www.phpbb3hacks.com",
+			"role": "Original Author"
+		}],
+	"require": {
+		"php": ">=5.3.3"
+	},
+	"require-dev": {
+		"phpbb/epv": "dev-master"
+	},
+	"extra": {
+		"display-name": "Navigation Buttons Extension",
+		"soft-require": {
+			"phpbb/phpbb": ">=3.1.0-RC2,<3.2.*@dev"
+		}
+	}
+}

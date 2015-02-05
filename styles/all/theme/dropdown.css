@@ -1,0 +1,119 @@
+/**
+*
+*	Name: NAVIGATION BUTTON MODULE | Dropdown CSS
+*	Author: Vipaka
+*	Edited / Tweaked By: Hazerofdoom
+*
+**/
+
+/* First Level of CSS - The Main Menu */
+
+#menu_bar{
+	width: 100%;
+	font-size: 1.2em;
+	text-align: center;
+	height: 40px;
+	box-shadow: 0px 0px 5px #000;
+}
+
+.top_menu {
+	list-style-type: none;
+	margin: 0 auto;
+	position: relative;
+	display: inline-block;
+	height: 40px;
+}
+
+.top_menu li {
+	font-weight: normal;
+	text-align: center;
+	padding: 0px;
+	height: 40px;
+	-webkit-transition: background-color 0.8s, -webkit-transform 0.8s;
+    transition:background-color 0.8s, transform 0.8s;
+}
+.top_menu li ul li:last-child{
+	border-bottom-right-radius: 12px;
+	border-bottom-left-radius: 12px;
+}
+
+.top_menu li a {
+	width: auto;
+	text-align: center;
+	padding: 14px 20px 14px 20px;
+	display: block;
+	background: rgba( 0, 0, 0, 0.05 );
+	color: white;
+	min-width: 70px;
+	font-weight: bold;
+}
+
+
+.top_menu li a:hover {
+	text-decoration: none;
+	/*background: rgba( 0, 0, 0, 0.1 );*/
+}
+
+#menu_bar .top_menu:after {
+	content: ""; 
+	clear: both;
+	display: inline-block;
+}
+
+.top_li {
+	padding: 0 30px 0 0;
+	float: left;
+}
+
+/* Second Level of CSS - The Dropdown*/
+
+.top_menu li:hover > ul {
+	display: block;
+	width: auto;
+    background: rgba(0,0,0,0.2);
+    box-shadow: 0px 2px 5px #090909;
+}
+
+.top_menu li ul, .top_menu li ul li ul{
+	position: absolute;
+	padding: 0px;
+	display: none;
+	list-style: none;
+	z-index: 2;
+	top: 100%;
+}
+
+.top_menu li ul li a {
+	width: auto;
+	text-align: center;
+	padding: 14px 10px 14px 10px; 
+	display: block;
+	background:  rgba( 255, 255, 255, 0.1 );
+	color: white;
+	min-width: 90px;
+}
+
+.top_menu li ul:last-child {
+	border-bottom-right-radius: 12px;
+	border-bottom-left-radius: 12px;
+}
+
+.top_menu li ul li:first-child {
+	border-top: 5px solid rgba( 0, 0, 0, 0.2 );
+}
+
+/* Third Level of CSS - Sub Sub Menus */
+
+.top_menu li ul li ul {
+	left: 100%;
+	top: 0px;
+	z-index: 2;
+}
+
+.top_menu li ul li ul:last-child {
+	border-radius: 0px;
+}
+
+.top_menu li ul li ul li:first-child {
+	border: 0px solid transparent;
+}

@@ -1,0 +1,30 @@
+<!-- IF MENU_ENABLED == 1 -->
+  <div id="menu_bar" style="background: {S_NAVBAR_PARENT}; font-family: {S_NAVBAR_FONT};">
+    <ul class="top_menu" id="top_menu_nav">
+	
+    	<!-- BEGIN buttons -->
+				
+				<!-- IF buttons.DISPLAY == 1 --><li class="top_li {buttons.CLASS}" data-link="ul-{buttons.ID}" id="button-{buttons.ID}"><a <!-- IF buttons.LINKED == 1 -->href="{buttons.URL}"<!-- ENDIF --> title="{buttons.NAME}" alt="{buttons.NAME}" accesskey="e"<!-- IF buttons.EXTERNAL == 1 --> target="blank"<!-- ENDIF -->><font color="{S_NAVBAR_COLOR}">{buttons.NAME}</font> </a>
+       			  	<!-- IF .buttons.sub -->
+        			   	 <ul id="ul-{buttons.ID}" class="top_menu_sub" style="font-family: {S_NAVBAR_FONT};">
+       				       <!-- BEGIN sub -->
+								      <!-- IF sub.DISPLAY == 1 --><li data-link="ul-{sub.ID}"><a <!-- IF sub.LINKED == 1 --> href="{sub.URL}"<!-- ENDIF --><!-- IF sub.EXTERNAL == 1 --> target="blank"<!-- ENDIF -->><font color="{S_NAVBAR_COLOR}">{sub.NAME}</font></a>
+										    <!-- IF .buttons.sub.subs -->
+        			   	 					<ul id="ul-{sub.ID}" class="top_menu_sub_subs" style="font-family: {S_NAVBAR_FONT};">
+       				      					 <!-- BEGIN subs -->
+													         <!-- IF subs.DISPLAY == 1 --><li><a <!-- IF subs.LINKED == 1 -->href="{subs.URL}"<!-- ENDIF --><!-- IF subs.EXTERNAL == 1 --> target="blank"<!-- ENDIF -->><font color="{S_NAVBAR_COLOR}">{subs.NAME}</font></a></li><!-- ENDIF -->
+											         <!-- END subs -->
+          									</ul>
+        								<!-- ENDIF -->
+								      </li><!-- ENDIF -->
+							<!-- END sub -->
+          				</ul>
+        			<!-- ENDIF -->
+        			</li>
+          <!-- ENDIF -->
+      <!-- END buttons -->
+      <!-- IF U_ACP --><li class="top_li" data-last-responsive="true"><a href="{U_ACP}" title="{L_ACP}" role="menuitem">{L_ACP_SHORT}</a></li><!-- ENDIF -->
+    <!-- IF U_MCP --><li class="top_li" data-last-responsive="true"><a href="{U_MCP}" title="{L_MCP}" role="menuitem">{L_MCP_SHORT}</a></li><!-- ENDIF -->
+    </ul>
+  </div>
+<!-- ENDIF -->
